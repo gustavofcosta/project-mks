@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MaxWidth = styled.div`
-  width: 1600px;
+  width: 1500px;
 `
 
 export const Section = styled.section`
