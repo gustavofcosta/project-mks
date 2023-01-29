@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images.pexels.com'],
+    domains: ['mks-sistemas.nyc3.digitaloceanspaces.com'],
   },
   compiler: {
     styledComponents: true,

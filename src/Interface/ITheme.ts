@@ -1,6 +1,7 @@
 export default interface ITheme {
   bgDefault: string;
   bgPrimary: string;
+  bgPrimaryAlternative: string;
   bgWhite: string;
   bgPrice: string;
   bgFooter: string;

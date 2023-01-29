@@ -17,7 +17,7 @@ export const ContentImg = styled.div`
 
   
   img{
-    width: 100%;
+    width: 90%;
     height: 138px;
     border-radius: 8px;
     object-fit: contain;
@@ -42,10 +42,6 @@ export const ContentInfo = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 8px;
-    p {
-      
-      
-    }
   }
   
   p {
@@ -55,30 +51,6 @@ export const ContentInfo = styled.div`
     color: ${({theme})=> theme.textPrimary};
     padding: 10px 0;
     height: 60px;
-  }
-
-`;
-
-export const Button = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${({theme})=>theme.bgPrimary};
-  width: 100%;
-  height: 32px;
-  border: none;
- 
-  border-radius: 0 0 8px 8px;
-  color: ${({theme})=>theme.textWhite};
-  padding: 10px 65px;
-  cursor: pointer;
-
-  span {
-    margin-left: 16px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
   }
 `;
 
@@ -94,3 +66,31 @@ export const Price = styled.span`
   font-size: 15px;
   line-height: 15px;
 `
+
+export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: ${({theme})=>theme.bgPrimary};
+  width: 100%;
+  height: 32px;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  color: ${({theme})=>theme.textWhite};
+  padding: 10px 65px;
+  transition: all 0.5s ease-in-out;
+  
+  :hover {
+    background: ${({theme})=>theme.bgPrimaryAlternative};
+    cursor: pointer;
+  }
+
+  span {
+    margin-left: 16px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+`;
+

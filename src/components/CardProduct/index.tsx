@@ -1,6 +1,7 @@
 import ICardProducts from '../../Interface/ICardProducts';
 import { Button, Card, ContentImg, ContentInfo, Price } from './styled';
 import BagCard from '../../assets/BagCard'
+import Image from 'next/image';
 
 export default function CardProduct({
   photo,
@@ -12,9 +13,11 @@ export default function CardProduct({
   return (
     <Card>
       <ContentImg>
-        <img
+        <Image
           src={photo}
           alt={name}
+          width={400}
+          height={250}
         />
       </ContentImg>
       <ContentInfo>
