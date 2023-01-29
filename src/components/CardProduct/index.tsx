@@ -23,7 +23,7 @@ export default function CardProduct({
       <ContentInfo>
         <div>
           <h1><span>{brand} </span>{name}</h1>
-          <Price>R${price}</Price>
+          <Price>R${parseFloat(price)}</Price>
         </div>
         <p>{description}</p>
       </ContentInfo>

@@ -1,8 +1,11 @@
 import Head from 'next/head'
-import Store from './Store';
+import Store from '../components/Store';
 import globals from "../Globals.json";
 import axios from 'axios';
 import ICardProducts from '@/Interface/ICardProducts';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import Sidebar from '@/components/Sidebar';
 
 
 const base_url = "https://mks-challenge-api-frontend.herokuapp.com"
@@ -18,7 +21,10 @@ export default function Home({ products }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
+      <Sidebar />
       <Store products={products} />
+      <Footer />
     </>
   )
 }

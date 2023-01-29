@@ -50,7 +50,7 @@ export const ContentInfo = styled.div`
     line-height: 12px;
     color: ${({theme})=> theme.textPrimary};
     padding: 10px 0;
-    height: 60px;
+    min-height: 70px;
   }
 `;
 
