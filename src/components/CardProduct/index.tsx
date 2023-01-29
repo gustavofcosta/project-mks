@@ -3,7 +3,7 @@ import { Button, Card, ContentImg, ContentInfo } from './styled';
 import BagCard from '../../assets/BagCard'
 
 export default function CardProduct({
-  img,
+  photo,
   name,
   brand,
   description,
@@ -13,7 +13,7 @@ export default function CardProduct({
     <Card>
       <ContentImg>
         <img
-          src={img}
+          src={photo}
           alt={name}
         />
       </ContentImg>
@@ -26,5 +26,6 @@ export default function CardProduct({
       </ContentInfo>
       <Button><BagCard /> <span>Comprar</span></Button>
     </Card>
+
   );
 }

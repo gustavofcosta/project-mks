@@ -3,6 +3,6 @@ export default interface ICardProducts {
   name: string;
   brand: string;
   description: string;
-  price: number;
-  img: string;
+  price: string;
+  photo: string;
 }

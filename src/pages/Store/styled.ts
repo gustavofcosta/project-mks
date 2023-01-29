@@ -7,5 +7,5 @@ export const Section = styled.section`
   min-width: 100vw;
   min-height: 100vh;
   background-color: ${({ theme }) => theme.bgDefault};
-  padding: 0 50px;
+  padding: 0 40px;
 `;

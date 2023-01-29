@@ -16,27 +16,33 @@ export const Card = styled.article`
 `;
 
 export const ContentImg = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
   
   img{
-    width: 100%;
+    width: 60%;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
   }
 `;
 
 export const ContentInfo = styled.div`
   padding: 10px;
-  
+ 
   h1 {
     color: ${({theme})=> theme.textPrimary};
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     padding-right: 15px;
+    flex: 1;
   }
 
   div {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     margin-bottom: 8px;
 
     p {

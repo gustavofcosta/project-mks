@@ -1,8 +1,15 @@
 import Head from 'next/head'
-import Store from '../components/Store';
+import Store from './Store';
+import globals from "../Globals.json";
+import axios from 'axios';
+import ICardProducts from '@/Interface/ICardProducts';
 
 
-export default function Home() {
+const base_url = "https://mks-challenge-api-frontend.herokuapp.com"
+
+
+export default function Home({ products }: any) {
+
   return (
     <>
       <Head>
@@ -14,7 +21,22 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet"></link>
       </Head>
-      <Store />
+      <Store products={products} />
     </>
   )
+}
+
+export const getStaticProps = async () => {
+
+  try {
+    const { data } = await axios.get(`${base_url}/${globals.api.products}?page=1&rows=8&sortBy=id&orderBy=ASC`);
+
+    const products: ICardProducts[] = await data.products
+
+    return { props: { products }, revalidate: 10, };
+
+  } catch (error) {
+    console.log(error);
+  }
+
 }
