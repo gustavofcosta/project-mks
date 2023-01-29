@@ -1,5 +1,5 @@
 import ICardProducts from '../../Interface/ICardProducts';
-import { Button, Card, ContentImg, ContentInfo } from './styled';
+import { Button, Card, ContentImg, ContentInfo, Price } from './styled';
 import BagCard from '../../assets/BagCard'
 
 export default function CardProduct({
@@ -20,7 +20,7 @@ export default function CardProduct({
       <ContentInfo>
         <div>
           <h1><span>{brand} </span>{name}</h1>
-          <p>R${price}</p>
+          <Price>R${price}</Price>
         </div>
         <p>{description}</p>
       </ContentInfo>
