@@ -8,8 +8,6 @@ export default function CardList({ products }: any) {
 
   const [listProducts, setListProducts] = useState<ICardProducts[]>(products)
 
-  console.log(products);
-
   return (
     <Wrapper>
       {listProducts.map((product: ICardProducts) => {

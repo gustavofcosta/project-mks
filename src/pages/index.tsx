@@ -5,7 +5,6 @@ import axios from 'axios';
 import ICardProducts from '@/Interface/ICardProducts';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Sidebar from '@/components/Sidebar';
 
 
 const base_url = "https://mks-challenge-api-frontend.herokuapp.com"
@@ -22,7 +21,6 @@ export default function Home({ products }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Sidebar />
       <Store products={products} />
       <Footer />
     </>

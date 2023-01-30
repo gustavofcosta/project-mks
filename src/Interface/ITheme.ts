@@ -3,6 +3,7 @@ export default interface ITheme {
   bgPrimary: string;
   bgPrimaryAlternative: string;
   bgWhite: string;
+  bgBlack:string;
   bgPrice: string;
   bgFooter: string;
   textWhite: string;

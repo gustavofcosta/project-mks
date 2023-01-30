@@ -8,6 +8,10 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  html {
+    font-size: 100%;
+  }
+
   body {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;

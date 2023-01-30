@@ -25,7 +25,8 @@ export const ContentImg = styled.div`
 `;
 
 export const ContentInfo = styled.div`
-  padding: 10px 8px;
+  padding: 10px 15px;
+
  
   h1 {
     color: ${({theme})=> theme.textPrimary};
@@ -33,7 +34,6 @@ export const ContentInfo = styled.div`
     font-size: 16px;
     line-height: 19px;
     padding-right: 2px;
-
     height: 38px;    
   }
 

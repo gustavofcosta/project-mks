@@ -5,6 +5,7 @@ export const theme: ITheme = {
   bgPrimary: '#0F52BA',
   bgPrimaryAlternative: '#3f75c8',
   bgWhite: '#FFFFFF',
+  bgBlack: '#000000',
   bgPrice: '#373737',
   bgFooter: '#EEEEEE',
   textWhite: '#FFFFFF',

@@ -4,12 +4,16 @@ export const Nav = styled.nav`
   position: fixed;
   top: 0;
   width: 100vw;
-  height: 48px;
+  height: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background: ${({theme})=> theme.bgPrimary};
+
+  @media screen and (min-width: 500px) {
+      height: 65px;
+    }
 
   h1 {
     font-weight: 600;
