@@ -42,4 +42,5 @@ export const getStaticProps = async () => {
     console.log(error);
   }
 
+
 }
