@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   width: 100%;
   max-width: 1400px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
   margin: 70px 100px;
 
