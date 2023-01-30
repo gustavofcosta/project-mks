@@ -2,14 +2,20 @@ import ICardProducts from '../../Interface/ICardProducts';
 import { Button, Card, ContentImg, ContentInfo, Price } from './styled';
 import BagCard from '../../assets/BagCard'
 import Image from 'next/image';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch } from '@/store';
+import { addCart } from '@/features/cart/cartSlice';
 
 export default function CardProduct({
+  id,
   photo,
   name,
   brand,
   description,
   price,
 }: ICardProducts) {
+  const dispatch = useDispatch<AppDispatch>()
+
   return (
     <Card>
       <ContentImg>
@@ -27,7 +33,7 @@ export default function CardProduct({
         </div>
         <p>{description}</p>
       </ContentInfo>
-      <Button><BagCard /> <span>Comprar</span></Button>
+      <Button onClick={() => { dispatch(addCart(id)) }} ><BagCard /> <span>Comprar</span></Button>
     </Card>
 
   );

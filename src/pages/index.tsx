@@ -1,16 +1,27 @@
 import Head from 'next/head'
 import Store from '../components/Store';
-import globals from "../Globals.json";
-import axios from 'axios';
-import ICardProducts from '@/Interface/ICardProducts';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { getProductsItems } from '../features/cart/cartSlice';
+import { AppDispatch } from '@/store';
 
 
-const base_url = "https://mks-challenge-api-frontend.herokuapp.com"
+export default function Home() {
+  const { listProducts, isLoading } = useSelector((store: any) => store.cart)
+  const dispatch = useDispatch<AppDispatch>();
 
 
-export default function Home({ products }: any) {
+  useEffect(() => {
+    dispatch(getProductsItems());
+  }, [listProducts])
+
+  if (isLoading) {
+    return (
+      <div><h1>Loading...</h1></div>
+    )
+  }
 
   return (
     <>
@@ -21,24 +32,8 @@ export default function Home({ products }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Store products={products} />
+      <Store />
       <Footer />
     </>
   )
-}
-
-export const getStaticProps = async () => {
-
-  try {
-    const { data } = await axios.get(`${base_url}/${globals.api.products}?page=1&rows=8&sortBy=id&orderBy=ASC`);
-
-    const products: ICardProducts[] = await data.products
-
-    return { props: { products }, revalidate: 10, };
-
-  } catch (error) {
-    console.log(error);
-  }
-
-
 }

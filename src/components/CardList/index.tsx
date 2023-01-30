@@ -1,12 +1,10 @@
 import { Wrapper } from './styled';
 import ICardProducts from '../../Interface/ICardProducts';
 import CardProduct from '../CardProduct';
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-
-export default function CardList({ products }: any) {
-
-  const [listProducts, setListProducts] = useState<ICardProducts[]>(products)
+export default function CardList() {
+  const { listProducts } = useSelector((store: any) => store.cart)
 
   return (
     <Wrapper>

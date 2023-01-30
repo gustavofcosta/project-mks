@@ -1,12 +1,11 @@
 import CardList from '../CardList';
 import { Section } from './styled';
 
-
-export default function Store({ products }: any) {
+export default function Store() {
 
   return (
     <Section>
-      <CardList products={products} />
+      <CardList />
     </Section>
   );
 }

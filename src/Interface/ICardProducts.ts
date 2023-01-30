@@ -5,4 +5,5 @@ export default interface ICardProducts {
   description: string;
   price: string;
   photo: string;
+  amount:number;
 }
