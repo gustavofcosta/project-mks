@@ -25,8 +25,12 @@ export const ContentImg = styled.div`
 `;
 
 export const ContentInfo = styled.div`
+<<<<<<< HEAD
   padding: 10px 15px;
 
+=======
+  padding: 10px 14px;
+>>>>>>> 8a52dfd225a622c69bc224fb7921fc212ae793d1
  
   h1 {
     color: ${({theme})=> theme.textPrimary};
