@@ -25,7 +25,7 @@ export const ContentImg = styled.div`
 `;
 
 export const ContentInfo = styled.div`
-  padding: 10px 12px;
+  padding: 10px 14px;
  
   h1 {
     color: ${({theme})=> theme.textPrimary};
