@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.aside`
     background: ${({theme})=> theme.bgPrimary};
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 330px;
@@ -10,7 +10,7 @@ export const Container = styled.aside`
     display: grid;
     grid-template-rows: auto 1fr auto;
     transition: all 0.5s ease-in-out;
-    transform: translate(0%);
+    transform: translate(100%);
 
     @media screen and (min-width: 500px) {
         width: 486px;
