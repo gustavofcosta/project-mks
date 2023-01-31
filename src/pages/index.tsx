@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getProductsItems } from '../features/cart/cartSlice';
 import { AppDispatch } from '@/store';
+import Cart from '@/components/Cart';
 
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getProductsItems());
-  }, [listProducts])
+  }, [])
 
   if (isLoading) {
     return (
@@ -33,6 +34,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Store />
+      <Cart />
       <Footer />
     </>
   )
