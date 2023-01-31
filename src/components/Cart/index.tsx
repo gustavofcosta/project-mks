@@ -1,5 +1,5 @@
 import Close from "@/assets/Close";
-import { Container } from "./styled";
+import { Container, TotalCart } from "./styled";
 
 export default function Cart() {
 
