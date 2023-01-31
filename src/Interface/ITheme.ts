@@ -9,4 +9,5 @@ export default interface ITheme {
   textWhite: string;
   textPrimary: string;
   textBlack: string;
+  borderDefault: string;
 }

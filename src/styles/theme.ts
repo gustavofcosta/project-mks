@@ -11,4 +11,5 @@ export const theme: ITheme = {
   textWhite: '#FFFFFF',
   textPrimary: '#2C2C2C',
   textBlack: '#000000',
+  borderDefault: "#BFBFBF",
 };
