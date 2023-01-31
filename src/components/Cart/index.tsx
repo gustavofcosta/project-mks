@@ -1,5 +1,5 @@
 import Close from "@/assets/Close";
-import { Container, TotalCart } from "./styled";
+import { Button, Container, TotalCart } from "./styled";
 
 export default function Cart() {
 
@@ -10,8 +10,11 @@ export default function Cart() {
 
             </ul>
             <TotalCart>
-
+                Total: <span>R${798}</span> 
             </TotalCart>
+            <Button>
+                Finalizar Compra
+            </Button>
         </Container>
     )
 };
