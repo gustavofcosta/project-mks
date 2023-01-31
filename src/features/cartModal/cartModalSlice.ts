@@ -12,15 +12,15 @@ const CartModalSlice = createSlice({
   name: 'cartModal',
   initialState,
   reducers: {
-    openModal: (state) => {
+    openCartModal: (state) => {     
       state.isOpen = true;
     },
-    closeModal: (state) => {
+    closeCartModal: (state) => {
       state.isOpen = false;
     },
   },
 });
 
-export const { openModal, closeModal } = CartModalSlice.actions;
+export const { openCartModal, closeCartModal } = CartModalSlice.actions;
 
 export default CartModalSlice.reducer;

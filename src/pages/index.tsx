@@ -4,19 +4,23 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getProductsItems } from '../features/cart/cartSlice';
+import { calculateTotals, getProductsItems } from '../features/cart/cartSlice';
 import { AppDispatch } from '@/store';
 import Cart from '@/components/Cart';
 
 
 export default function Home() {
-  const { listProducts, isLoading } = useSelector((store: any) => store.cart)
+  const { cartProducts, isLoading } = useSelector((store: any) => store.cart)
   const dispatch = useDispatch<AppDispatch>();
 
 
   useEffect(() => {
     dispatch(getProductsItems());
   }, [])
+
+  useEffect(() => {
+    dispatch(calculateTotals());
+  }, [cartProducts]);
 
   if (isLoading) {
     return (

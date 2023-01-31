@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.aside`
+export const Container =  styled.aside<{isOpen :boolean}>`
     background: ${({theme})=> theme.bgPrimary};
     position: fixed;
     top: 0;
@@ -11,7 +11,7 @@ export const Container = styled.aside`
     display: grid;
     grid-template-rows: auto 1fr auto;
     transition: all 0.5s ease-in-out;
-    transform: translate(0%);
+    transform: ${({isOpen}) => isOpen ? "translate(0%)" : "translate(100%)" } ;
 
 
     @media screen and (min-width: 500px) {
