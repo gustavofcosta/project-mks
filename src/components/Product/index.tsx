@@ -5,6 +5,7 @@ import { ListItems, Price, WrapperBtn, Amount } from "./styled";
 export default function Product({ id, photo, amount, price, brand, name }: ICardProducts) {
     return (
         <ListItems>
+            <button>X</button>
             <Image
                 src={photo}
                 alt={name}
@@ -21,6 +22,7 @@ export default function Product({ id, photo, amount, price, brand, name }: ICard
                 <div>
                     <Price>R${price}</Price>
                 </div>
+
             </Amount>
         </ListItems>
     )

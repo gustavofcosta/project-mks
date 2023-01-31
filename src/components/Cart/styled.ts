@@ -4,6 +4,7 @@ export const Container = styled.aside`
     background: ${({theme})=> theme.bgPrimary};
     position: fixed;
     top: 0;
+    bottom: 0;
     right: 0;
     width: 330px;
     height: 100%;
@@ -11,6 +12,7 @@ export const Container = styled.aside`
     grid-template-rows: auto 1fr auto;
     transition: all 0.5s ease-in-out;
     transform: translate(0%);
+
 
     @media screen and (min-width: 500px) {
         width: 486px;
@@ -58,5 +60,11 @@ export const Button = styled.button`
     line-height: 15px;
     text-align: center;
     padding: 30px 0;
+    cursor: pointer;
 `;
 
+export const Btn = styled.button`
+    background: none;
+    border: none;
+    cursor: pointer;
+`;

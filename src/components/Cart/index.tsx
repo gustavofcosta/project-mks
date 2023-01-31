@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 import { ICardProducts } from "typings";
 import CartProducts from '../CartProducts';
 
-import { Button, Container, TotalCart } from "./styled";
+import { Button, Container, TotalCart, Btn } from "./styled";
 
 export default function Cart() {
 
 
     return (
         <Container>
-            <div><h2>Carrinho <br /> de compras</h2><Close /></div>
+            <div><h2>Carrinho <br /> de compras</h2><Btn><Close /></Btn></div>
 
             <CartProducts />
 
