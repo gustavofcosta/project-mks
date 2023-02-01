@@ -2,14 +2,14 @@ import { decrease, increase, removeItem } from '@/features/cart/cartSlice';
 import Image from "next/image";
 import { useDispatch } from 'react-redux';
 import { ICardProducts } from "typings";
-import { ListItems,Brand, Price, WrapperBtn, Amount } from "./styled";
+import { ListItems,Brand, Price, WrapperBtn, Amount, BtnRemoveProduct, Qtd, AmountValue } from "./styled";
 
-export default function CartProduct({ id, photo, amount, price, brand, name }: ICardProducts) {
+export default function CartProduct({ id, photo, amount, price, brand, name}: ICardProducts) {
     const dispatch = useDispatch()
 
     return (
         <ListItems>
-            <button onClick={() => dispatch(removeItem(id))}>X</button>
+            <BtnRemoveProduct onClick={() => dispatch(removeItem(id))}>X</BtnRemoveProduct>
             <Image
                 src={photo}
                 alt={name}
@@ -19,6 +19,7 @@ export default function CartProduct({ id, photo, amount, price, brand, name }: I
             <Brand>{brand} {name}</Brand>
             <Amount>
                 <WrapperBtn>
+                    <Qtd>Qtd:</Qtd>
                     <span onClick={() => {
                         if (amount === 1) {
                             dispatch(removeItem(id));
@@ -26,7 +27,7 @@ export default function CartProduct({ id, photo, amount, price, brand, name }: I
                         }
                         dispatch(decrease({ id }));
                     }}> - </span>
-                    <p>{amount}</p>
+                    <AmountValue>{amount}</AmountValue>
                     <span onClick={() => {
                         dispatch(increase({ id }));
                     }}> + </span>
