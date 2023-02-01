@@ -3,20 +3,23 @@ import { closeCartModal } from '@/features/cartModal/cartModalSlice';
 import { AppDispatch } from '@/store';
 import { useDispatch, useSelector } from "react-redux";
 import { ICardProducts } from "typings";
-import CartProducts from '../CartProducts';
+import CartProduct from "../CartProduct";
 
-import { Button, Container, TotalCart, Btn } from "./styled";
+import { Button, Container, TotalCart, Btn, WrapperTitle, WrapperProducts } from "./styled";
 
 export default function Cart() {
+    const { cartProducts, total } = useSelector((store: any) => store.cart)
     const { isOpen } = useSelector((store: any) => store.cartModal)
-    const { total } = useSelector((store: any) => store.cart)
     const dispatch = useDispatch<AppDispatch>();
+ 
 
     return (
         <Container isOpen={isOpen}>
-            <div><h2>Carrinho <br /> de compras</h2><Btn onClick={() => { dispatch(closeCartModal()) }}><Close /></Btn></div>
+            <WrapperTitle><h2>Carrinho <br /> de compras</h2><Btn onClick={() => { dispatch(closeCartModal()) }}><Close /></Btn></WrapperTitle>
 
-            <CartProducts />
+            <WrapperProducts>
+                {cartProducts.map((products: ICardProducts) => <CartProduct key={products.id} {...products} />)}
+            </WrapperProducts>
 
             <TotalCart>
                 Total: <span>R${total}</span>

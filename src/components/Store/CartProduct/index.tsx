@@ -2,9 +2,9 @@ import { decrease, increase, removeItem } from '@/features/cart/cartSlice';
 import Image from "next/image";
 import { useDispatch } from 'react-redux';
 import { ICardProducts } from "typings";
-import { ListItems, Price, WrapperBtn, Amount } from "./styled";
+import { ListItems,Brand, Price, WrapperBtn, Amount } from "./styled";
 
-export default function Product({ id, photo, amount, price, brand, name }: ICardProducts) {
+export default function CartProduct({ id, photo, amount, price, brand, name }: ICardProducts) {
     const dispatch = useDispatch()
 
     return (
@@ -16,7 +16,7 @@ export default function Product({ id, photo, amount, price, brand, name }: ICard
                 width={90}
                 height={80}
             />
-            <p>{brand} {name}</p>
+            <Brand>{brand} {name}</Brand>
             <Amount>
                 <WrapperBtn>
                     <span onClick={() => {
@@ -31,10 +31,9 @@ export default function Product({ id, photo, amount, price, brand, name }: ICard
                         dispatch(increase({ id }));
                     }}> + </span>
                 </WrapperBtn>
-                <div>
-                    <Price>R${Math.trunc(price)}</Price>
-                </div>
-
+             
+                <Price>R${Math.trunc(price)}</Price>
+                
             </Amount>
         </ListItems>
     )

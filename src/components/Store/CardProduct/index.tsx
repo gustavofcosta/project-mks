@@ -1,10 +1,11 @@
-import ICardProducts from '../../Interface/ICardProducts';
+import ICardProducts from '../../../Interface/ICardProducts';
 import { Button, Card, ContentImg, ContentInfo, Price } from './styled';
-import BagCard from '../../assets/BagCard'
+import BagCard from '../../../assets/BagCard'
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '@/store';
 import { addCart } from '@/features/cart/cartSlice';
+import { useRef } from 'react';
 
 export default function CardProduct({
   id,
@@ -15,6 +16,8 @@ export default function CardProduct({
   price,
 }: ICardProducts) {
   const dispatch = useDispatch<AppDispatch>()
+  
+  
 
   return (
     <Card>

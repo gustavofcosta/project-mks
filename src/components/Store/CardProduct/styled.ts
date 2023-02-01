@@ -8,6 +8,7 @@ export const Card = styled.article`
   background-color: ${({theme})=> theme.bgWhite};
   border-radius: 8px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+  margin: 0 4px;
 `;
 
 export const ContentImg = styled.div`

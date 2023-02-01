@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

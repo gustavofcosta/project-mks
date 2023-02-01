@@ -1,5 +1,5 @@
 import { Wrapper } from './styled';
-import ICardProducts from '../../Interface/ICardProducts';
+import ICardProducts from '../../../Interface/ICardProducts';
 import CardProduct from '../CardProduct';
 import { useSelector } from 'react-redux';
 

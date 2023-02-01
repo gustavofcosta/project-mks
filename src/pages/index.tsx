@@ -3,19 +3,22 @@ import Store from '../components/Store';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { calculateTotals, getProductsItems } from '../features/cart/cartSlice';
 import { AppDispatch } from '@/store';
-import Cart from '@/components/Cart';
-
+import Cart from '@/components/Store/Cart';
+import ICardProducts from '@/Interface/ICardProducts';
+import Skeleton from '@/components/Skeleton';
+import { Wrapper } from '@/components/Store/CardList/styled';
+import { Card } from '@/components/Store/CardProduct/styled';
 
 export default function Home() {
-  const { cartProducts, isLoading } = useSelector((store: any) => store.cart)
+  
+  const {cartProducts, isLoading } = useSelector((store: any) => store.cart)
   const dispatch = useDispatch<AppDispatch>();
 
-
   useEffect(() => {
-    dispatch(getProductsItems());
+      dispatch(getProductsItems()); 
   }, [])
 
   useEffect(() => {
@@ -24,7 +27,12 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <div><h1>Loading...</h1></div>
+      <>
+       <Navbar />
+        <Wrapper>{[1, 2, 3, 4, 5, 6, 7 , 8].map((product: any) => (
+          <Skeleton key={product.id} width={280} height={270} borderRadius={8} marginTop={50}/>
+        ))}</Wrapper>
+      </>
     )
   }
 

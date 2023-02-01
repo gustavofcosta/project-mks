@@ -18,25 +18,31 @@ export const Container =  styled.aside<{isOpen :boolean}>`
         width: 486px;
     }
 
-    div {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin: 25px 13px 0px 32px;
-        
-        @media screen and (min-width: 500px) {
-            margin: 36px 22px 36px 47px;
-        }
+`;
 
-        h2 {
-            font-weight: 700;
-            font-size: 27px;
-            line-height: 33px;
-            color: ${({theme})=> theme.textWhite};
-            max-width: 178px;
-        }
+export const WrapperProducts = styled.ul`
+  overflow-y: scroll;
+`;
+
+export const WrapperTitle = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 25px 13px 0px 32px;
+    
+    @media screen and (min-width: 500px) {
+        margin: 36px 22px 36px 47px;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 33px;
+        color: ${({theme})=> theme.textWhite};
+        max-width: 178px;
     }
 `;
+
 
 export const TotalCart = styled.div`
     display: flex;
