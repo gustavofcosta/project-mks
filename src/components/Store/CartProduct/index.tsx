@@ -11,7 +11,7 @@ export default function CartProduct({ id, photo, amount, price, brand, name }: I
 
     return (
         <ListItems>
-            <BtnRemoveProduct onClick={() => dispatch(removeItem(id))}>X</BtnRemoveProduct>
+            <BtnRemoveProduct onClick={() => dispatch(removeItem(id))} name="remover produto">X</BtnRemoveProduct>
             <Image
                 src={photo}
                 alt={name}

@@ -38,7 +38,7 @@ export default function CardProduct({
         </div>
         <p>{description}</p>
       </ContentInfo>
-      <Button onClick={() => { dispatch(addCart(id)) }} ><BagCard /> <span>Comprar</span></Button>
+      <Button onClick={() => { dispatch(addCart(id)) }} name="comprar" ><BagCard /> <span>Comprar</span></Button>
     </Card>
 
   );

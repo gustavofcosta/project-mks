@@ -26,7 +26,7 @@ export default function Cart() {
             <TotalCart>
                 <div>Total:</div><span>R${total}</span>
             </TotalCart>
-            <Button>
+            <Button name='Finalizar compra'>
                 Finalizar Compra
             </Button>
         </Container>
