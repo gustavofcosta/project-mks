@@ -1,10 +1,12 @@
-import { decrease, increase, removeItem } from '@/features/cart/cartSlice';
+
 import Image from "next/image";
 import { useDispatch } from 'react-redux';
-import { ICardProducts } from "typings";
-import { ListItems,Brand, Price, WrapperBtn, Amount, BtnRemoveProduct, Qtd, AmountValue } from "./styled";
+import { ICardProducts } from '../../../../typings';
+import { decrease, increase, removeItem } from '../../../features/cart/cartSlice';
 
-export default function CartProduct({ id, photo, amount, price, brand, name}: ICardProducts) {
+import { ListItems, Brand, Price, WrapperBtn, Amount, BtnRemoveProduct, Qtd, AmountValue } from "./styled";
+
+export default function CartProduct({ id, photo, amount, price, brand, name }: ICardProducts) {
     const dispatch = useDispatch()
 
     return (
@@ -32,9 +34,9 @@ export default function CartProduct({ id, photo, amount, price, brand, name}: IC
                         dispatch(increase({ id }));
                     }}> + </span>
                 </WrapperBtn>
-             
-                <Price>R${Math.trunc(price)}</Price>
-                
+
+                <Price>R${Math.trunc(parseFloat(price))}</Price>
+
             </Amount>
         </ListItems>
     )

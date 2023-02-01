@@ -1,4 +1,4 @@
-import ITheme from '../Interface/ITheme';
+import { ITheme } from '../../typings';
 
 export const theme: ITheme = {
   bgDefault: '#E5E5E5',

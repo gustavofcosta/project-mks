@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import Cart from '../../assets/Cart';
+import { openCartModal } from '../../features/cartModal/cartModalSlice';
+import { AppDispatch } from '../../store';
 import { Nav } from './styled';
-import { openCartModal } from '@/features/cartModal/cartModalSlice';
-import { AppDispatch } from '@/store';
 
 
 

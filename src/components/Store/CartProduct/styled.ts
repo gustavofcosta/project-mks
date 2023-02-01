@@ -65,7 +65,7 @@ export const Brand = styled.p`
     font-weight: 400;
     line-height: 19px;
     text-align: center;
-    padding: 5px;
+    padding: 5px 18px;
     margin-top: 12px;
     text-align: left;
 
@@ -75,6 +75,7 @@ export const Brand = styled.p`
         padding: 0 8px;
         margin-bottom: 10px;
         width: 130px;
+        padding: 5px;
     }
 
 `;

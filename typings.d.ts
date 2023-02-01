@@ -3,9 +3,9 @@ export interface ICardProducts {
   name: string;
   brand: string;
   description: string;
-  price: number;
+  price: string;
   photo: string;
-  amount: number;
+  amount:number;
 }
 
 
@@ -14,9 +14,13 @@ export interface ITheme {
   bgPrimary: string;
   bgPrimaryAlternative: string;
   bgWhite: string;
+  bgBlack:string;
   bgPrice: string;
   bgFooter: string;
   textWhite: string;
   textPrimary: string;
   textBlack: string;
+  borderDefault: string;
 }
+
+

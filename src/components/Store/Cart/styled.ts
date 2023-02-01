@@ -22,6 +22,19 @@ export const Container =  styled.aside<{isOpen :boolean}>`
 
 export const WrapperProducts = styled.ul`
   overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+  width: 10px;             
+  }
+
+  ::-webkit-scrollbar-track {
+    background: white;   
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({theme})=> theme.bgPrimary};
+    border-radius: 8px;      
+  }
 `;
 
 export const WrapperTitle = styled.div`
@@ -46,15 +59,15 @@ export const WrapperTitle = styled.div`
 
 export const TotalCart = styled.div`
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    padding: 40px 40px;
     font-weight: 700;
     font-size: 28px;
     line-height: 15px;
+    font-size: 28px;
     color: ${({theme})=> theme.textWhite};
-    padding: 44px 20px 35px 0px; 
 
     @media screen and (min-width: 500px) {
-        padding: 20px 40px 5px 0px;
     }
 `;
 
