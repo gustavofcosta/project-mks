@@ -13,7 +13,7 @@ const mock = {
 }
 
 describe('<CardProduct />', () => {
-  it('should reder CardProduct correctly', () => {
+  it('should render CardProduct correctly', () => {
     render(<CardProduct {...mock} />);
 
   })

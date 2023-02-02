@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import Navbar from '.';
 
 describe('<Navbar />', () => {
-  it('should reder Navbar correctly', () => {
+  it('should render Navbar correctly', () => {
     render(<Navbar />);
   })
 });

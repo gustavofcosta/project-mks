@@ -11,6 +11,7 @@ export const Nav = styled.nav`
   padding: 10px 20px;
   background: ${({theme})=> theme.bgPrimary};
 
+
   @media screen and (min-width: 500px) {
       height: 65px;
     }
@@ -45,6 +46,11 @@ export const Nav = styled.nav`
     color: ${({theme})=> theme.textBlack};
     border: none;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
+
+    :hover {
+      transform: scale(1.2);
+    }
 
     @media screen and (min-width: 500px) {
       margin-right: 55px;

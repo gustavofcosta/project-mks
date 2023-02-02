@@ -10,7 +10,7 @@ const mock = {
 }
 
 describe('<Skeleton />', () => {
-  it('should reder Skeleton correctly', () => {
+  it('should render Skeleton correctly', () => {
     render(<Skeleton {...mock} />);
   })
 });

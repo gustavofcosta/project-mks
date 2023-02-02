@@ -1,12 +1,11 @@
 import { Button, Card, ContentImg, ContentInfo, Price } from './styled';
 import BagCard from '../../../assets/BagCard'
 import Image from 'next/image';
-import { useDispatch, useSelector } from 'react-redux';
-
-import { useRef } from 'react';
+import { useDispatch } from 'react-redux';
 import { ICardProducts } from '../../../../typings';
 import { AppDispatch } from '../../../store';
 import { addCart } from '../../../features/cart/cartSlice';
+import { openCartModal } from '@/features/cartModal/cartModalSlice';
 
 
 export default function CardProduct({
@@ -19,7 +18,10 @@ export default function CardProduct({
 }: ICardProducts) {
   const dispatch = useDispatch<AppDispatch>()
 
-
+const handleBuy = (id: number) => {
+  dispatch(addCart(id)); 
+  dispatch(openCartModal());
+}
 
   return (
     <Card>
@@ -38,7 +40,7 @@ export default function CardProduct({
         </div>
         <p>{description}</p>
       </ContentInfo>
-      <Button onClick={() => { dispatch(addCart(id)) }} name="comprar" ><BagCard /> <span>Comprar</span></Button>
+      <Button onClick={() => handleBuy(id)} name="comprar" ><BagCard /> <span>Comprar</span></Button>
     </Card>
 
   );

@@ -79,7 +79,7 @@ export const Button = styled.button`
   border-radius: 0 0 8px 8px;
   color: ${({theme})=>theme.textWhite};
   padding: 10px 65px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
   
   :hover {
     background: ${({theme})=>theme.bgPrimaryAlternative};

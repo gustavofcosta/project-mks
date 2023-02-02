@@ -13,7 +13,7 @@ const mock = {
 }
 
 describe('<CartProduct />', () => {
-  it('should reder CartProduct correctly', () => {
+  it('should render CartProduct correctly', () => {
     render(<CartProduct {...mock} />);
 
   })

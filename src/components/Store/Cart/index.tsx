@@ -7,7 +7,7 @@ import { AppDispatch } from '../../../store';
 
 import CartProduct from "../CartProduct";
 
-import { Button, Container, TotalCart, Btn, WrapperTitle, WrapperProducts } from "./styled";
+import { Button, Container, TotalCart, Btn, WrapperTitle, WrapperProducts, WrapperEmpty } from "./styled";
 
 export default function Cart() {
     const { cartProducts, total } = useSelector((store: any) => store.cart)
@@ -20,7 +20,9 @@ export default function Cart() {
             <WrapperTitle><h2>Carrinho <br /> de compras</h2><Btn onClick={() => { dispatch(closeCartModal()) }}><Close /></Btn></WrapperTitle>
 
             <WrapperProducts>
-                {cartProducts.map((products: ICardProducts) => <CartProduct key={products.id} {...products} />)}
+                {cartProducts.length < 1 ? <WrapperEmpty>Carrinho vazio</WrapperEmpty> 
+                : 
+                cartProducts.map((products: ICardProducts) => <CartProduct key={products.id} {...products} />)}
             </WrapperProducts>
 
             <TotalCart>

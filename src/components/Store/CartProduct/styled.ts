@@ -41,6 +41,11 @@ export const BtnRemoveProduct = styled.button`
     font-size: 42px;
     background:none;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
+
+    :hover {
+       transform: scale(1.1);
+    }
 
     
     @media screen and (min-width: 500px) {

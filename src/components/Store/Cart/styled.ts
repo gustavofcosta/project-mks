@@ -80,10 +80,35 @@ export const Button = styled.button`
     text-align: center;
     padding: 30px 0;
     cursor: pointer;
+    border: none;
+    transition: all 0.4s ease-in-out;
+
+    :hover {
+        background: ${({theme})=> theme.bgPrice};
+
+    }
 `;
 
 export const Btn = styled.button`
     background: none;
     border: none;
     cursor: pointer;
+
+    transition: all 0.4s ease-in-out;
+
+    :hover {
+        transform: scale(1.15);
+    }
+`;
+
+export const WrapperEmpty = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: ${({theme})=> theme.textWhite};
 `;
